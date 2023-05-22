@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Permanent File Storage with Bundlr Network and Next.js Route Handlers
 
-## Getting Started
+This is a reference architecture showing how to upload files and images to Arweave permanent storage with Bundlr Network and Next.js
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+This project assumes you have an EVM compatible wallet with "Matic" tokens.
+
+If you do not have Matic, you can choose any of the [supported tokens here](https://docs.bundlr.network/overview/supported-tokens) instead, and swap out the references to `matic` in the route handlers with the token of your choice.
+
+### Project setup
+
+For this project to run, you need to have an environment variable set as `BNDLR_KEY` to be accessed as `process.env.BNDLR_KEY`. You can do this many ways, one being having a `.env.local` file (see `.example.env.local`). __BE SURE TO NEVER SEND ANY PRIVATE KEYS TO ANY CODE REPOSITORIES, IT'S BEST TO SET THEM LOCALLY IN YOUR SESSION__.
+
+## Running the app
+
+1. Clone the repo
+
+```sh
+git clone git@github.com:dabit3/nextjs-route-handlers-permanent-file-storage.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install depdenencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# or yarn, pnpm, etc...
+```
 
-## Learn More
+3. Run the app
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Be sure you have your environment variable set as referenced above.
